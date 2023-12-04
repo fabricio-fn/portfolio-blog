@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity';
 import { client } from '../lib/client';
-import { IPost } from '@/types/posts';
+import { IPost } from '@/types/interfaces';
 
 const postFields = `
   _id,
