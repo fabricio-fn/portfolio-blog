@@ -1,32 +1,49 @@
 import Link from 'next/link';
 import { getAllPosts } from '@/../sanity/utils/sanityApi';
-import Image from 'next/image';
+import { Metadata } from 'next';
+import { formatDate } from '@/utils/formatDate';
 
-export default async function AllPosts() {
+export const metadata: Metadata = {
+  title: 'Blog',
+  description:
+    'Aqui eu compartilho alguns aprendizados que venho tendo no mundo da programação.'
+};
+
+export default async function Blog() {
   const posts = await getAllPosts();
 
   return (
-    <>
-      <h2>Ultimos Posts</h2>
+    <section className="min-h-screen flex flex-col gap-10">
+      <div className="flex flex-col gap-4 max-w-2xl">
+        <h1 className="sm:text-6xl font-bold text-4xl">
+          Seja Bem-vindo(a) ao meu{' '}
+          <strong className="text-primary font-bold">Blog pessoal</strong>
+        </h1>
 
-      <ul>
+        <p className="sm:text-2xl font-normal text-base">
+          Aqui eu compartilho alguns aprendizados que venho tendo no mundo da
+          programação.
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-bold">Todos os posts</h2>
+
+      <ul className="grid gap-4 w-full sm:grid-cols-auto-fit-400">
         {posts.map((post) => (
           <li key={post._id}>
-            {post.mainImage && (
-              <Image
-                src={post.mainImage.asset.url}
-                alt={post.mainImage.alt}
-                width={250}
-                height={200}
-                className="object-cover rouded-lg"
-              />
-            )}
-            <span>{post.publishedAt}</span>
-            <h3>{post.title}</h3>
-            <Link href={`/blog/${post.slug.current}`}>Ver post</Link>
+            <Link
+              href={`/blog/${post.slug.current}`}
+              className="min-h-[180px] border-2 border-secondary p-4 rounded-lg flex flex-col gap-4 hover:border-primary hover:shadow-2xl"
+            >
+              <h3 className="text-3xl font-bold">{post.title}</h3>
+
+              <span className="text-base text-secondary">
+                {formatDate(post.publishedAt)}
+              </span>
+            </Link>
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 }
