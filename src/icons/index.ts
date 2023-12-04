@@ -1,0 +1,14 @@
+export { IconHTML } from '@/icons/IconHTML';
+export { IconCSS } from '@/icons/IconCSS';
+export { IconTypescript } from '@/icons/IconTypescript';
+export { IconJavascript } from '@/icons/IconJavascript';
+export { IconReact } from '@/icons/IconReact';
+export { IconNext } from '@/icons/IconNext';
+export { IconSass } from '@/icons/IconSass';
+export { IconBootstrap } from '@/icons/IconBootstrap';
+export { IconTailwindcss } from '@/icons/IconTailwindcss';
+export { IconStyledComponents } from '@/icons/IconStyledComponents';
+export { IconGithub } from '@/icons/IconGithub';
+export { IconLinkedin } from '@/icons/IconLinkedin';
+export { IconGmail } from '@/icons/IconGmail';
+export { IconArrowUp } from '@/icons/IconArrowUp';
