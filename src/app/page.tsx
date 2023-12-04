@@ -1,3 +1,13 @@
+import Hero from '@/components/Hero';
+import CardsSkills from '@/components/CardsSkills';
+import About from '@/components/About';
+
 export default function Home() {
-  return <h1>Hello New Portfolio</h1>;
+  return (
+    <main className="flex flex-col gap-16">
+      <Hero />
+      <About />
+      <CardsSkills />
+    </main>
+  );
 }
