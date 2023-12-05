@@ -12,3 +12,4 @@ export { IconGithub } from '@/icons/IconGithub';
 export { IconLinkedin } from '@/icons/IconLinkedin';
 export { IconGmail } from '@/icons/IconGmail';
 export { IconArrowUp } from '@/icons/IconArrowUp';
+export { IconHeart } from '@/icons/IconHeart';
