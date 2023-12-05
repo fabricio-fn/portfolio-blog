@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import Section from './Section';
 
 export default function About() {
   return (
-    <section className="min-h-screen flex flex-col gap-8 justify-center">
+    <Section id="sobre">
       <h2 className="sm:text-6xl font-bold text-4xl">Sobre</h2>
 
       <div className="flex flex-col xl:flex-row gap-4 xl:justify-between">
@@ -30,6 +31,6 @@ export default function About() {
           </h3>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

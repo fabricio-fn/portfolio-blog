@@ -1,8 +1,9 @@
+import Section from './Section';
 import SocialMediaLinks from './SocialMediaLinks';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col gap-10 justify-center">
+    <Section id="inicio">
       <div className="flex flex-col gap-8 max-w-2xl">
         <h1 className="sm:text-6xl font-bold text-4xl">
           Hey, Eu me chamo Fabricio Nascimento,{' '}
@@ -19,6 +20,6 @@ export default function Hero() {
 
         <SocialMediaLinks />
       </div>
-    </section>
+    </Section>
   );
 }

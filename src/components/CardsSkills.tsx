@@ -1,8 +1,9 @@
 import { skillsData } from '@/data/skillsData';
+import Section from './Section';
 
 export default function CardsSkills() {
   return (
-    <section className="min-h-screen flex flex-col gap-10">
+    <Section>
       <h2 className="sm:text-6xl font-bold text-4xl">Conhecimentos</h2>
 
       <ul className="grid gap-4 grid-cols-auto-fit-150">
@@ -17,6 +18,6 @@ export default function CardsSkills() {
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }
