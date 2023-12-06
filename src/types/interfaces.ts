@@ -23,3 +23,10 @@ export interface ISocialMedia {
   label: string;
   href: string;
 }
+
+export interface IProjects {
+  description: string;
+  image: string;
+  link: string;
+  code: string;
+}
