@@ -8,7 +8,7 @@ export default function Section({ children, ...props }: SectionProps) {
   return (
     <section
       {...props}
-      className="px-[5%] md:px-[15%] min-[2293px]:px-[5%] min-h-screen flex flex-col gap-8 justify-center"
+      className="px-[5%] xl:px-52 min-h-screen flex flex-col gap-8 justify-center"
     >
       {children}
     </section>

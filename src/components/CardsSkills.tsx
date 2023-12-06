@@ -6,7 +6,7 @@ export default function CardsSkills() {
     <Section>
       <h2 className="sm:text-6xl font-bold text-4xl">Conhecimentos</h2>
 
-      <ul className="grid gap-4 grid-cols-auto-fit-150">
+      <ul className="grid gap-4 grid-cols-2 sm:grid-cols-auto-fit-150">
         {skillsData.map((skill, index) => (
           <li
             key={index}

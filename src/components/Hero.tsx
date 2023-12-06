@@ -4,8 +4,8 @@ import SocialMediaLinks from './SocialMediaLinks';
 export default function Hero() {
   return (
     <Section id="inicio">
-      <div className="flex flex-col gap-8 max-w-2xl">
-        <h1 className="sm:text-6xl font-bold text-4xl">
+      <div className="flex flex-col gap-8  md:max-w-4xl">
+        <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold">
           Hey, Eu me chamo Fabricio Nascimento,{' '}
           <strong className="text-primary font-bold">
             Desenvolvedor Fron-End
@@ -13,9 +13,9 @@ export default function Hero() {
         </h1>
 
         <h2 className="sm:text-2xl font-normal text-base">
-          Focado em criar interfaces eficientes e estilosas, Estou em constante
-          evolução para aprimorar minhas habilidades, sempre disposto a
-          trabalhar em equipe para alcançar os melhores resultados.
+          Transformando ideias em código de maneira eficaz, criando experiências
+          digitais funcionais e atraentes, explore meu portfólio e veja alguns
+          dos meus projetos e habilidades.
         </h2>
 
         <SocialMediaLinks />

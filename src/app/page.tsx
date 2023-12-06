@@ -4,7 +4,7 @@ import About from '@/components/About';
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-16">
+    <main className="flex flex-col gap-16 lg:gap-0">
       <Hero />
       <About />
       <CardsSkills />

@@ -2,18 +2,19 @@ import Link from 'next/link';
 import { getAllPosts } from '@/../sanity/utils/sanityApi';
 import { Metadata } from 'next';
 import { formatDate } from '@/utils/formatDate';
+import Section from '@/components/Section';
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Blog | Fabricio Nascimento - Desenvolvedor Fron-End',
   description:
-    'Aqui eu compartilho alguns aprendizados que venho tendo no mundo da programação.'
+    'Seja Bem-vindo(a) ao meu Blog pessoal Aqui eu compartilho alguns aprendizados que venho tendo no mundo da programação.'
 };
 
 export default async function Blog() {
   const posts = await getAllPosts();
 
   return (
-    <section className="min-h-screen flex flex-col gap-10">
+    <Section>
       <div className="flex flex-col gap-4 max-w-2xl">
         <h1 className="sm:text-6xl font-bold text-4xl">
           Seja Bem-vindo(a) ao meu{' '}
@@ -44,6 +45,6 @@ export default async function Blog() {
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }

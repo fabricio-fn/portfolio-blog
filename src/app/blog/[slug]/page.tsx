@@ -1,4 +1,5 @@
 import { getPostBySlug } from '@/../sanity/utils/sanityApi';
+import Section from '@/components/Section';
 import { formatDate } from '@/utils/formatDate';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,8 +10,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(slug);
 
   return (
-    <section className="min-h-screen flex flex-col gap-10">
-      <div className="flex flex-col gap-8 md:gap-16">
+    <Section>
+      <div className="flex flex-col gap-8 py-8">
         <div className="flex flex-col gap-4">
           <div className="flex gap-2 items-center">
             <Link
@@ -23,7 +24,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
           {post.mainImage && (
             <Image
-              src="/teste.jpg"
+              src={post.mainImage.asset.url}
               alt={post.mainImage.alt}
               width={800}
               height={500}
@@ -40,6 +41,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
           <h1 className="sm:text-6xl font-bold text-4xl">{post.title}</h1>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
