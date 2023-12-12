@@ -15,8 +15,8 @@ export default async function Blog() {
 
   return (
     <Section>
-      <div className="flex flex-col gap-4 max-w-2xl">
-        <h1 className="sm:text-6xl font-bold text-4xl">
+      <div className="flex flex-col gap-8 md:max-w-4xl">
+        <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold">
           Seja Bem-vindo(a) ao meu{' '}
           <strong className="text-primary font-bold">Blog pessoal</strong>
         </h1>
