@@ -57,6 +57,25 @@ export default defineType({
         ]
       }
     }),
+    defineArrayMember({
+      type: 'code',
+      name: 'code',
+      title: 'Code Block',
+      options: {
+        language: 'javascript',
+        languageAlternatives: [
+          { title: 'HTML', value: 'html' },
+          { title: 'CSS', value: 'css' },
+          { title: 'JavaScript', value: 'javascript' },
+          { title: 'TypeScript', value: 'typescript' },
+          { title: 'Bash', value: 'bash' },
+          { title: 'JSX', value: 'jsx' },
+          { title: 'TSX', value: 'tsx' },
+          { title: 'JSON', value: 'json' }
+        ],
+        withFilename: true
+      }
+    }),
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
