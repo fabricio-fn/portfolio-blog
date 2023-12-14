@@ -3,6 +3,7 @@ import { urlForImage } from '../../sanity/lib/image';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { IPortableTextComponents } from '@/types/interfaces';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import CopyToClipboard from './CopyToClipboard';
 
 export const portableTextComponents: IPortableTextComponents = {
   image: ({ value }) => {
@@ -17,14 +18,13 @@ export const portableTextComponents: IPortableTextComponents = {
       />
     );
   },
-
   types: {
     code: ({ value }) => {
       return (
         <div className="w-full border-2 border-secondary rounded-lg overflow-hidden">
           <div className="border-secondary border-b-2 p-2 text-sm flex justify-between items-center">
             {value?.filename}
-            <button>icon Copy code</button>
+            <CopyToClipboard code={value.code} />
           </div>
           <SyntaxHighlighter language={value.language} style={dracula}>
             {value.code}
