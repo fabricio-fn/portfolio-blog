@@ -5,6 +5,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { portableTextComponents } from '@/components/PortableTextComponents';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = params;
+
+  const post = await getPostBySlug(slug);
+  return {
+    title: post.title
+  };
+}
 
 export default async function Post({ params }: { params: { slug: string } }) {
   const { slug } = params;
