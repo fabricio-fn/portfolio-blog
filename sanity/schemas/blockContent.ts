@@ -87,6 +87,23 @@ export default defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative Text'
+        },
+        {
+          name: 'imageCredit',
+          type: 'object',
+          title: 'Image Credit',
+          fields: [
+            {
+              name: 'siteName',
+              type: 'string',
+              title: 'Site Name'
+            },
+            {
+              name: 'imageSourceUrl',
+              type: 'url',
+              title: 'Image Source URL'
+            }
+          ]
         }
       ]
     })

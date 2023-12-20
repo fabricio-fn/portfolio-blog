@@ -35,15 +35,31 @@ export default async function Post({ params }: { params: { slug: string } }) {
             </Link>
           </div>
 
-          {post.mainImage && (
-            <Image
-              src={post.mainImage.asset.url}
-              alt={post.mainImage.alt}
-              width={800}
-              height={500}
-              className="object-cover rounded-lg min-w-full max-h-[80vh]"
-            />
-          )}
+          <div className="flex flex-col gap-2 items-center">
+            {post.mainImage && (
+              <Image
+                src={post.mainImage.asset.url}
+                alt={post.mainImage.alt}
+                width={800}
+                height={500}
+                className="object-cover rounded-lg min-w-full max-h-[80vh]"
+              />
+            )}
+
+            {post.mainImage?.imageCredit && (
+              <span className="text-sm">
+                Font:{''}
+                <Link
+                  href={post.mainImage.imageCredit.imageSourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-primary underline"
+                >
+                  {post.mainImage.imageCredit.siteName}
+                </Link>
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="flex flex-col gap-4">

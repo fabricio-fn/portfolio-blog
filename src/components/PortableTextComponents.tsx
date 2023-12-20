@@ -4,20 +4,36 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { IPortableTextComponents } from '@/types/interfaces';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import CopyToClipboard from './CopyToClipboard';
+import Link from 'next/link';
 
 export const portableTextComponents: IPortableTextComponents = {
-  image: ({ value }) => {
-    return (
+  image: ({ value }) => (
+    <div className="flex flex-col gap-2 items-center">
       <Image
         src={urlForImage(value).url()}
-        alt={value.alt || 'Poster do artigo'}
+        alt={value.alt || ''}
         loading="lazy"
         width={800}
         height={800}
-        className="w-full h-auto"
+        className="object-cover rounded-lg min-w-full h-auto"
       />
-    );
-  },
+
+      {value?.imageCredit && (
+        <span className="text-sm">
+          Font:{' '}
+          <Link
+            href={value.imageCredit.imageSourceUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary underline"
+          >
+            {value.imageCredit.siteName}
+          </Link>
+        </span>
+      )}
+    </div>
+  ),
+
   types: {
     code: ({ value }) => {
       return (

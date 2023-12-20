@@ -14,6 +14,10 @@ export interface IPost {
   mainImage: {
     alt: string;
     asset: { url: string };
+    imageCredit?: {
+      siteName: string;
+      imageSourceUrl: string;
+    };
   };
   publishedAt: string;
   body: PortableTextBlock[];
@@ -43,6 +47,10 @@ export interface IProjects {
 interface ImageComponentProps {
   value: {
     alt: string;
+    imageCredit?: {
+      siteName: string;
+      imageSourceUrl: string;
+    };
   };
 }
 
