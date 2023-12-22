@@ -9,7 +9,11 @@ const postFields = `
   author->{name},
   mainImage{
     alt,
-    asset->{url}
+    asset->{url},
+    imageCredit{
+      siteName,
+      imageSourceUrl
+    }
   },
   categories->{title},
   publishedAt,
