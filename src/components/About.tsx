@@ -22,23 +22,23 @@ export default function About() {
 
         <div className="flex w-full xl:w-3/5 flex-col gap-4">
           <h3 className="sm:text-2xl font-normal text-base">
-            Ola, me chamo Fabrício e tenho 22 anos, gosto de filmes, series,
+            Olá, me chamo Fabrício e tenho 22 anos, gosto de filmes, séries,
             cultura pop no geral. Gosto de consumir conteúdo sobre
-            desenvolvimento pessoal além de estudar e procurar sempre melhorar
+            desenvolvimento pessoal, além de estudar e procurar sempre melhorar
             em tudo o que faço. Meu antigo emprego não tinha nada a ver com
-            programação, eu trabalhei em uma fábrica de gelo a noite, e
+            programação, eu trabalhei em uma fábrica de gelo à noite e
             aproveitava o pouco tempo que me restava durante o dia para focar
             nos estudos. Atualmente foco em Desenvolvimento Front-End, mas estou
-            sempre aberto a novas oportunidades e desafios. Sintase a vontade
-            para entrar em contato comigo através do{' '}
+            sempre aberto a novas oportunidades e desafios. Fique à vontade para
+            entrar em contato comigo através do{' '}
             <Link
               href="https://www.linkedin.com/in/fabriciofn/"
               target="_blank"
               className="text-primary"
             >
-              meu linkedin
-            </Link>{' '}
-            seja para trabalho ou apenas discutir ideias.
+              meu LinkedIn
+            </Link>
+            , seja para trabalho ou apenas para discutir ideias.
           </h3>
         </div>
       </div>
