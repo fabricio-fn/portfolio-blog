@@ -20,7 +20,7 @@ const postFields = `
   body
 `;
 
-const getAllPostsQuery = groq`*[_type == "post"] { ${postFields} }`;
+const getAllPostsQuery = groq`*[_type == "post"] | order(priority desc, _updatedAt desc) { ${postFields} }`;
 
 export const getAllPosts = async (): Promise<IPost[]> => {
   try {
