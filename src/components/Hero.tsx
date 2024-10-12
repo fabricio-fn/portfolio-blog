@@ -8,7 +8,7 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold">
           Hey, Eu me chamo Fabricio Nascimento,{' '}
           <strong className="text-primary font-bold">
-            Desenvolvedor Fron-End
+            Desenvolvedor Web
           </strong>
         </h1>
 
