@@ -7,9 +7,7 @@ export default function Hero() {
       <div className="flex flex-col gap-8  md:max-w-4xl">
         <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold">
           Hey, Eu me chamo Fabricio Nascimento,{' '}
-          <strong className="text-primary font-bold">
-            Desenvolvedor Web
-          </strong>
+          <strong className="text-primary font-bold">Desenvolvedor Web</strong>
         </h1>
 
         <h2 className="sm:text-2xl font-normal text-base">

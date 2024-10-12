@@ -22,15 +22,14 @@ export default function About() {
 
         <div className="flex w-full xl:w-3/5 flex-col gap-4">
           <h3 className="sm:text-2xl font-normal text-base">
-            Olá, me chamo Fabrício, gosto de filmes, séries,
-            cultura pop no geral. Gosto de consumir conteúdo sobre
-            desenvolvimento pessoal, além de estudar e procurar sempre melhorar
-            em tudo o que faço. Meu antigo emprego não tinha nada a ver com
-            programação, eu trabalhei em uma fábrica de gelo à noite e
-            aproveitava o pouco tempo que me restava durante o dia para focar
-            nos estudos. Atualmente foco em Desenvolvimento Web, mas estou
-            sempre aberto a novas oportunidades e desafios. Fique à vontade para
-            entrar em contato comigo através do{' '}
+            Olá, me chamo Fabrício, gosto de filmes, séries, cultura pop no
+            geral. Gosto de consumir conteúdo sobre desenvolvimento pessoal,
+            além de estudar e procurar sempre melhorar em tudo o que faço. Meu
+            antigo emprego não tinha nada a ver com programação, eu trabalhei em
+            uma fábrica de gelo à noite e aproveitava o pouco tempo que me
+            restava durante o dia para focar nos estudos. Atualmente foco em
+            Desenvolvimento Web, mas estou sempre aberto a novas oportunidades e
+            desafios. Fique à vontade para entrar em contato comigo através do{' '}
             <Link
               href="https://www.linkedin.com/in/fabriciofn/"
               target="_blank"
